@@ -10,5 +10,12 @@ let $startButton = document.querySelector(".start-button");
 
 $startButton.addEventListener("click", function(){
     game.start();
-    
+    document.querySelector("#woof-sound").play();
+});
+
+let $restartBtn = document.querySelector("#restart-btn");
+
+$restartBtn.addEventListener("click", function(){
+    game.start();
+    document.querySelector("#woof-sound").play();
 });

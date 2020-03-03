@@ -16,9 +16,42 @@ body{
     position: relative;
     top: 50%;
     left: 50%;
+    transform: translateX(-50%);
     border: 1px solid #97f0c8;
     color: white;
     padding: 20px 50px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+h1 {
+    background-color: rgba(62, 230, 155, 0.4);
+    color: white;
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+h2{
+    background-color: rgba(62, 230, 155, 0.4);
+    color: white;
+    position: fixed;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#restart-btn {
+    background-color: #3ee69b;
+    position: fixed;
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid #97f0c8;
+    padding: 20px 50px;
+    color: white;
     text-align: center;
     text-decoration: none;
     font-size: 20px;

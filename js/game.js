@@ -21,7 +21,7 @@ class Game{
 
     start(){
         this.points();
-        this.newint = setInterval(() => {
+        this.newInt = setInterval(() => {
             renderEverything();
         }, 100);
     }
@@ -40,9 +40,18 @@ class Game{
 
     gameOver(){
         clearInterval(this.newInt);
-        console.log(this.currentPoints);
+        let $gameOver = document.createElement("h1");
+        let $points = document.createElement("h2");
+        let $restartButton = document.createElement("button");
+        $restartButton.setAttribute("id", "restart-btn");
+        $restartButton.innerHTML = "Try Again";
+        $points.innerHTML = `Your score: ${this.currentPoints} barks`
+        $gameOver.innerHTML = "Ohh , You suck !";
+        $body.appendChild($gameOver);
+        $body.appendChild($points);
+        $body.appendChild($restartButton);
         clearInterval(this.pointsId);
-        
+
     }
 }
 
