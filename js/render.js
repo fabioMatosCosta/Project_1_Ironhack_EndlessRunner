@@ -24,7 +24,7 @@ function gravityCheck(){
 function renderPlayer() {
     
     let $playerImg = document.createElement("img");
-    $playerImg.setAttribute("src", "./images/__Zombie01_Idle_000.png");
+    $playerImg.setAttribute("src", "./images/pug_run.gif");
     $playerImg.setAttribute("id", "player");
     $playerImg.style.position = `relative`;
     $playerImg.style.height = `${player.size}px`;
@@ -51,7 +51,7 @@ function obstaclePosition(){
 function renderObstacle(){
     
     let $obstacleImg = document.createElement("img");
-    $obstacleImg.setAttribute("src", "./images/Rock_Pile.png");~
+    $obstacleImg.setAttribute("src", "./images/cat_sleep.gif");~
     $obstacleImg.setAttribute("id", "obstacle");
     $obstacleImg.style.position = `relative`;
     $obstacleImg.style.height = `${obstacle.size}px`;

@@ -30,8 +30,6 @@ class Game{
     }
 
 
-
-
     gameOver(){
         clearInterval(this.pointsId);
         console.log(this.currentPoints);
