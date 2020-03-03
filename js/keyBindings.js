@@ -5,3 +5,10 @@ document.addEventListener("keydown", function(event){
         } 
     }
 });
+
+let $startButton = document.querySelector(".start-button");
+
+$startButton.addEventListener("click", function(){
+    game.start();
+    
+});

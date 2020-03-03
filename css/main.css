@@ -10,3 +10,16 @@ body{
     margin: 0;
     padding: 0;
 }
+
+.start-button {
+    background-color: #3ee69b;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    border: 1px solid #97f0c8;
+    color: white;
+    padding: 20px 50px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+}

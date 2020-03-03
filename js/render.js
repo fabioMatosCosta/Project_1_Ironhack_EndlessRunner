@@ -24,7 +24,7 @@ function gravityCheck(){
 function renderPlayer() {
     
     let $playerImg = document.createElement("img");
-    $playerImg.setAttribute("src", "./images/pug_run.gif");
+    $playerImg.setAttribute("src", "./images/pug_run_nb.gif");
     $playerImg.setAttribute("id", "player");
     $playerImg.style.position = `relative`;
     $playerImg.style.height = `${player.size}px`;
@@ -51,7 +51,7 @@ function obstaclePosition(){
 function renderObstacle(){
     
     let $obstacleImg = document.createElement("img");
-    $obstacleImg.setAttribute("src", "./images/cat_sleep.gif");~
+    $obstacleImg.setAttribute("src", "./images/cat_sleep_nb.gif");~
     $obstacleImg.setAttribute("id", "obstacle");
     $obstacleImg.style.position = `relative`;
     $obstacleImg.style.height = `${obstacle.size}px`;
@@ -66,21 +66,23 @@ function clearScreen(){
     $gameboard.innerHTML = "";
 }
 
+function renderBackground(){
+    $gameboard.style.backgroundImage = "url('./images/background2.gif')";
+}
+
 function renderEverything(){
     clearScreen();
+    renderBackground();
     renderPlayer();
     renderObstacle();
     gravityCheck();
     let $player = document.querySelector("#player");
     let $obstacle = document.querySelector("#obstacle");
     if (game.isCollide($player, $obstacle)){
-        alert("you suck, loser");
+        game.gameOver();
     }
 }
 
 
-let newint = setInterval(() => {
-    renderEverything();
-}, 100);
 
 
