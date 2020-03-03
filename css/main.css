@@ -16,6 +16,7 @@ body{
     position: relative;
     top: 50%;
     left: 50%;
+    border-radius: 5px 15px;
     transform: translateX(-50%);
     border: 1px solid #97f0c8;
     color: white;
@@ -49,6 +50,7 @@ h2{
     top: 70%;
     left: 50%;
     transform: translateX(-50%);
+    border-radius: 5px 15px;
     border: 1px solid #97f0c8;
     padding: 20px 50px;
     color: white;

@@ -3,7 +3,8 @@ class Game{
     constructor(){
         this.player = new Player;
         this.currentPoints = 0;
-        this.increment = this.increment.bind(this)
+        this.increment = this.increment.bind(this);
+        // this.start = this.start.bind(this);
         this.pointsId = 0;
         this.gravity = 0.4;
         this.obstacle = new Obstacle;
@@ -37,9 +38,10 @@ class Game{
             );
     }
 
-
+    
     gameOver(){
-        clearInterval(this.newInt);
+        let self = this;
+        debugger
         let $gameOver = document.createElement("h1");
         let $points = document.createElement("h2");
         let $restartButton = document.createElement("button");
@@ -51,7 +53,13 @@ class Game{
         $body.appendChild($points);
         $body.appendChild($restartButton);
         clearInterval(this.pointsId);
-
+        clearInterval(this.newInt);
+        let $restartBtn = document.querySelector("#restart-btn");
+        $restartBtn.addEventListener("click", function(){
+            self.start();
+            document.querySelector("#woof-sound").play();
+        });
+        
     }
 }
 
