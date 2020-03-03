@@ -1,3 +1,4 @@
+
 class Game{
     constructor(){
         this.player = new Player;
@@ -18,25 +19,14 @@ class Game{
 
 
     isCollide($player, $obstacle) {
-        debugger
-        var a = {
-            y: 100 - $player.offsetTop - $player.height, 
-            x: $player.offsetLeft,
-            height: $player.height,
-            width: $player.width
-        }
-        var b = {
-            y: 100 - $obstacle.offsetTop - $obstacle.height, 
-            x: $obstacle.offsetLeft,
-            height: $obstacle.height,
-            width: $obstacle.width
-        }
-        return !(
-            ((a.y + a.height) < (b.y)) ||
-            (a.y > (b.y + b.height)) ||
-            ((a.x + a.width) < b.x) ||
-            (a.x > (b.x + b.width))
-        );
+            const $playerRect = $player.getBoundingClientRect();
+            const $obstacleRect = $obstacle.getBoundingClientRect();
+            return !(
+                $playerRect.top + $playerRect.height < $obstacleRect.top ||
+                $playerRect.top > $obstacleRect.top + $obstacleRect.height ||
+                $playerRect.left + $playerRect.width < $obstacleRect.left ||
+                $playerRect.left > $obstacleRect.left + $obstacleRect.width
+            );
     }
 
 

@@ -1,9 +1,9 @@
 class Player{
     constructor(){
-        this.position = [1,9];
+        this.position = [2,9];
         this.size = 100;
-        this.height = 30;
-        this.width = 10;
+        this.height = 2;
+        this.width = 1;
     }
 
     jump(){

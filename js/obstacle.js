@@ -3,8 +3,8 @@ class Obstacle{
         this.position = [11, 8];
         this.velocity = 0.25;
         this.size = 50;
-        this.height = 20;
-        this.width = 10;
+        this.height = 1;
+        this.width = 1;
     }
 
     move(){
