@@ -69,3 +69,12 @@ h2{
     position: fixed;
     background-color: #97f0c8;
 }
+
+#poop {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 100px;
+}   

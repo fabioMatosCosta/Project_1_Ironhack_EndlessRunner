@@ -57,16 +57,19 @@ class Game{
         let $points = document.createElement("h2");
         let $restartButton = document.createElement("button");
         let $popDiv = document.createElement("div");
+        let $poop = document.createElement("img");
+        $poop.setAttribute("src","./images/poop.gif");
+        $poop.setAttribute("id","poop");
         $restartButton.setAttribute("id", "restart-btn");
         $restartButton.innerHTML = "Try Again";
         $points.innerHTML = `Your score: ${this.currentPoints} barks`
-        $gameOver.innerHTML = "Oh, poop!";
+        $gameOver.innerHTML = "You stink!";
         $popDiv.style.width = `100%`;
         $popDiv.style.height = `100%`;
         $popDiv.setAttribute("id", "popup");
 
         $body.appendChild($popDiv);
-        
+        $body.appendChild($poop);
         $body.appendChild($gameOver);
         $body.appendChild($points);
         $body.appendChild($restartButton);
@@ -80,6 +83,7 @@ class Game{
             $body.removeChild($points);
             $body.removeChild($restartButton);
             $body.removeChild($popDiv);
+            $body.removeChild($poop);
             this.start();
             document.querySelector("#woof-sound").play();
         });
