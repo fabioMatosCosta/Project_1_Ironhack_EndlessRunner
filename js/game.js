@@ -26,6 +26,7 @@ class Game{
         document.querySelector("#main").loop = true;
         document.querySelector("#main").play();
         this.points();
+
         this.newInt = setInterval(() => {
             renderEverything();
         }, 100);
@@ -37,10 +38,10 @@ class Game{
 
         this.obstDelInt = setInterval(()=> {
             if( this.obstacle.length > 2){
-                let randomObstacle = Math.floor(Math.random() * this.obstacle.length);
                 this.obstacle.splice(0, 1);
             }
         }, 3000)
+
     }
 
     isCollide($player, $obstacle) {
@@ -67,7 +68,7 @@ class Game{
         $restartButton.setAttribute("id", "restart-btn");
         $restartButton.innerHTML = "Try Again";
         $points.innerHTML = `Your score: ${this.currentPoints} barks`
-        $gameOver.innerHTML = "You stink!";
+        $gameOver.innerHTML = "You  stink!";
         $popDiv.style.width = `100%`;
         $popDiv.style.height = `100%`;
         $popDiv.setAttribute("id", "popup");
@@ -82,6 +83,7 @@ class Game{
         clearInterval(this.newInt);
         clearInterval(this.obsInt);
         clearInterval(this.obstDelInt);
+        clearInterval(this.difficultyInt);
         let $restartBtn = document.querySelector("#restart-btn");
         $restartBtn.addEventListener("click", ()=>{
             $body.removeChild($gameOver);

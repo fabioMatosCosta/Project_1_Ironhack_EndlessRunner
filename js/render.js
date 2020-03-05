@@ -75,14 +75,40 @@ function renderBackground(){
 }
 
 function renderScore(){
-    debugger
     let currentScore = game.currentPoints;
     let $score = document.createElement("p");
     $score.setAttribute("id", "score");
     $score.innerHTML = `Score: ${currentScore}`;
     $score.style.zIndex = "1";
     $gameboard.appendChild($score);
-    
+}
+
+function difLevel(){
+    if (game.currentPoints>10){
+        for(let i = 0; i<game.obstacle.length; i++){
+            game.obstacle[i].velocity += 0.03;
+        }
+    } else if(game.currentPoints>20){
+        for(let i = 0; i<game.obstacle.length; i++){
+            game.obstacle[i].velocity += 0.04;
+        }
+    } else if(game.currentPoints>30){
+        for(let i = 0; i<game.obstacle.length; i++){
+            game.obstacle[i].velocity += 0.06;
+        }
+    } else if(game.currentPoints>40){
+        for(let i = 0; i<game.obstacle.length; i++){
+            game.obstacle[i].velocity += 0.08;
+        }
+    }  else if(game.currentPoints>50){
+        for(let i = 0; i<game.obstacle.length; i++){
+            game.obstacle[i].velocity += 0.11;
+        }
+    }else if(game.currentPoints>30){
+        for(let i = 0; i<game.obstacle.length; i++){
+            game.obstacle[i].velocity += 0.15;
+        }
+    }
 }
 
 function renderEverything(){
@@ -91,6 +117,7 @@ function renderEverything(){
     renderPlayer();
     renderObstacle();
     gravityCheck();
+    difLevel();
 
     let $player = document.querySelector("#player");
     let $obstacle = document.querySelectorAll("#obstacle");
