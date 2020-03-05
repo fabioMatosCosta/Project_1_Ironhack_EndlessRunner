@@ -28,6 +28,7 @@ class Game{
             renderEverything();
         }, 100);
 
+        renderBackground();
         this.obsInt = setInterval(()=> {
             this.obstacle.push(new Obstacle);
         }, 2000)
@@ -82,8 +83,9 @@ class Game{
             $body.removeChild($gameOver);
             $body.removeChild($points);
             $body.removeChild($restartButton);
-            $body.removeChild($popDiv);
             $body.removeChild($poop);
+            $body.removeChild($popDiv);
+            this.currentPoints = 0;
             this.start();
             document.querySelector("#woof-sound").play();
         });

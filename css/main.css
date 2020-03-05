@@ -11,6 +11,27 @@ body{
     padding: 0;
 }
 
+.wrapper {
+    overflow: hidden;
+}
+
+.sliding-bg {
+    background: url("../images/backgrounds_big.png") repeat-x;
+    height: 600px;
+    width: 5076px;
+    position: fixed;
+    top: 0px;
+    transform: translate3d(0, 0, 0);
+    animation: slide 30s linear infinite;
+    z-index: -1;
+}
+
+@keyframes slide{
+    100% { 
+        transform: translateX(-66.6666%);  
+    }
+}
+
 .start-button {
     background-color: #3ee69b;
     position: relative;
@@ -68,6 +89,7 @@ h2{
 #popup {
     position: fixed;
     background-color: #97f0c8;
+    top: 0;
 }
 
 #poop {
@@ -78,3 +100,4 @@ h2{
     width: 100px;
     height: 100px;
 }   
+

@@ -4,7 +4,7 @@ let $bodyHeight = $body.offsetHeight;
 let $bodyWidth = $body.offsetWidth;
 let player = game.player;
 let obstacle = game.obstacle;
-
+let $backgroundWrapper = document.querySelector(".wrapper");
 
 function playerPosition(){
     let positionArr = [];
@@ -85,13 +85,13 @@ function clearScreen(){
 }
 
 function renderBackground(){
-    $gameboard.style.backgroundImage = "url('./images/background3.gif')";
-    // $gameboard.style.maxWidth = `1000px` ;
+    $slidingBackground = document.createElement("div");
+    $slidingBackground.setAttribute("class", "sliding-bg");
+    $backgroundWrapper.appendChild($slidingBackground);
 }
 
 function renderEverything(){
     clearScreen();
-    renderBackground();
     renderPlayer();
     renderObstacle();
     gravityCheck();
@@ -103,9 +103,4 @@ function renderEverything(){
             game.gameOver();
         }
     }
-    
 }
-
-
-
-
