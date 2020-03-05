@@ -94,19 +94,19 @@ function difLevel(){
         }
     } else if(game.currentPoints>30){
         for(let i = 0; i<game.obstacle.length; i++){
-            game.obstacle[i].velocity += 0.06;
+            game.obstacle[i].velocity += 0.04;
         }
     } else if(game.currentPoints>40){
         for(let i = 0; i<game.obstacle.length; i++){
-            game.obstacle[i].velocity += 0.08;
+            game.obstacle[i].velocity += 0.06;
         }
     }  else if(game.currentPoints>50){
         for(let i = 0; i<game.obstacle.length; i++){
-            game.obstacle[i].velocity += 0.11;
+            game.obstacle[i].velocity += 0.8;
         }
     }else if(game.currentPoints>30){
         for(let i = 0; i<game.obstacle.length; i++){
-            game.obstacle[i].velocity += 0.15;
+            game.obstacle[i].velocity += 0.9;
         }
     }
 }
