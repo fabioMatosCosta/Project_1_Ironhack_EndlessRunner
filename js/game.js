@@ -29,7 +29,7 @@ class Game{
 
         this.newInt = setInterval(() => {
             renderEverything();
-        }, 100);
+        }, 50);
 
         renderBackground();
         this.obsInt = setInterval(()=> {
