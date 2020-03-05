@@ -1,12 +1,18 @@
+@font-face {
+    font-family: Pixel;
+    src: url(../font/ARCADECLASSIC.TTF);
+}
+
 body{
+    font-family: Pixel;
     display: flex;
     justify-content: center;
     align-items: baseline;
 }
 
 .game-board-container {
-    width: 95vw;
-    height: 60vh;
+    width: 100vw;
+    height: 97vh;
     margin: 0;
     padding: 0;
 }
@@ -17,7 +23,7 @@ body{
 
 .sliding-bg {
     background: url("../images/backgrounds_big.png") repeat-x;
-    height: 600px;
+    height: 100vh;
     width: 5076px;
     position: fixed;
     top: 0px;
@@ -35,7 +41,7 @@ body{
 .start-button {
     background-color: #3ee69b;
     position: relative;
-    top: 50%;
+    top: 30%;
     left: 50%;
     border-radius: 5px 15px;
     transform: translateX(-50%);
@@ -45,7 +51,29 @@ body{
     text-align: center;
     text-decoration: none;
     font-size: 20px;
+    font-family: Pixel;
 }
+
+#score {
+    z-index: 1;
+    font-size: 3rem;
+}
+
+p {
+    position: fixed;
+    top: 55vh;
+    left: 50vw;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+h3 {
+    position: fixed;
+    top: 50vh;
+    left: 50vw;
+    transform: translateX(-50%);
+}
+
 
 h1 {
     background-color: rgba(62, 230, 155, 0.4);
@@ -84,6 +112,7 @@ h2{
     text-align: center;
     text-decoration: none;
     font-size: 20px;
+    font-family: Pixel;
 }
 
 #popup {

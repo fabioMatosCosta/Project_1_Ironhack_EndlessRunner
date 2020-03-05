@@ -68,7 +68,7 @@ class Game{
         $popDiv.style.width = `100%`;
         $popDiv.style.height = `100%`;
         $popDiv.setAttribute("id", "popup");
-
+        
         $body.appendChild($popDiv);
         $body.appendChild($poop);
         $body.appendChild($gameOver);

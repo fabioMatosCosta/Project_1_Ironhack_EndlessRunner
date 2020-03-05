@@ -51,7 +51,6 @@ function obstaclePosition(i){
 function renderObstacle(){
 
     for( let i = 0; i < obstacle.length; i++){
-        // if($body.offsetWidth <= 1000){
             let $obstacleImg = document.createElement("img");
             $obstacleImg.setAttribute("src", "./images/cat_sleep_nb.gif");~
             $obstacleImg.setAttribute("id", "obstacle");
@@ -61,21 +60,6 @@ function renderObstacle(){
             $obstacleImg.style.top = `${obstaclePosition(i)[1]}px`
             $obstacleImg.style.left = `${obstaclePosition(i)[0]}px`;
             $gameboard.appendChild($obstacleImg);
-        // }else if ($body.offsetWidth > 1000){
-        //     debugger
-        //     if((obstaclePosition(i)[0] < (1000 + $gameboard.offsetLeft))&&(obstaclePosition(i)[0] < $gameboard.offsetLeft)){
-        //         let $obstacleImg = document.createElement("img");
-        //         $obstacleImg.setAttribute("src", "./images/cat_sleep_nb.gif");~
-        //         $obstacleImg.setAttribute("id", "obstacle");
-        //         $obstacleImg.style.position = `relative`;
-        //         $obstacleImg.style.height = `${obstacle[i].size}px`;
-        //         $obstacleImg.style.width = `${obstacle[i].size - 20}px`;
-        //         $obstacleImg.style.top = `${obstaclePosition(i)[1]}px`
-        //         $obstacleImg.style.left = `${obstaclePosition(i)[0]}px`;
-        //         $gameboard.appendChild($obstacleImg);
-        //     }
-        // }
-        
     }
 }
 
@@ -90,8 +74,17 @@ function renderBackground(){
     $backgroundWrapper.appendChild($slidingBackground);
 }
 
+function renderScore(){
+    let currentScore = game.currentPoints;
+    let $score = document.createElement("p");
+    $score.setAttribute("class", "score");
+    $score.innerHTML = `Score: ${currentScore}`;
+    $gameboard.appendChild("$score");
+}
+
 function renderEverything(){
     clearScreen();
+    // renderScore();
     renderPlayer();
     renderObstacle();
     gravityCheck();
