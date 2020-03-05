@@ -8,6 +8,9 @@ class Player{
 
     jump(){
         this.position[1] -= 3;
+        if (Math.random()> 0.6){
+            document.querySelector("#woof-sound").play();
+        }
     }
 }
 

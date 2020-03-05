@@ -23,6 +23,9 @@ class Game{
     }
 
     start(){
+        debugger
+        document.querySelector("#main").loop = true;
+        document.querySelector("#main").play();
         this.points();
         this.newInt = setInterval(() => {
             renderEverything();
@@ -68,7 +71,7 @@ class Game{
         $popDiv.style.width = `100%`;
         $popDiv.style.height = `100%`;
         $popDiv.setAttribute("id", "popup");
-        
+        document.querySelector("#main").pause();
         $body.appendChild($popDiv);
         $body.appendChild($poop);
         $body.appendChild($gameOver);
