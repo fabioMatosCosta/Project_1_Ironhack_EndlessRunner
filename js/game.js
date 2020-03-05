@@ -6,7 +6,7 @@ class Game{
         this.increment = this.increment.bind(this);
         this.start = this.start.bind(this);
         this.pointsId = 0;
-        this.gravity = 0.4;
+        this.gravity = 0.3;
         this.obstacle = [new Obstacle];
         this.newInt = 0;
         this.obsInt = 0;

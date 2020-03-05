@@ -5,6 +5,14 @@ document.addEventListener("keydown", function(event){
         } 
     }
 });
+document.addEventListener("click", function(){
+    
+        if (player.position[1] > 9 && player.position[1] < 9.6 ) {
+            player.jump();
+        } 
+    S
+});
+
 
 let $startButton = document.querySelector(".start-button");
 
