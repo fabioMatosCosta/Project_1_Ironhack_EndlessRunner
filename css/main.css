@@ -55,8 +55,13 @@ body{
 }
 
 #score {
-    z-index: 1;
     font-size: 3rem;
+    color: white;
+    position: fixed;
+    top: 10vh;
+    left: 50vw;
+    transform: translateX(-50%);
+    text-align: center;
 }
 
 p {

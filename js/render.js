@@ -75,16 +75,19 @@ function renderBackground(){
 }
 
 function renderScore(){
+    debugger
     let currentScore = game.currentPoints;
     let $score = document.createElement("p");
-    $score.setAttribute("class", "score");
+    $score.setAttribute("id", "score");
     $score.innerHTML = `Score: ${currentScore}`;
-    $gameboard.appendChild("$score");
+    $score.style.zIndex = "1";
+    $gameboard.appendChild($score);
+    
 }
 
 function renderEverything(){
     clearScreen();
-    // renderScore();
+    renderScore();
     renderPlayer();
     renderObstacle();
     gravityCheck();

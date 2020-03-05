@@ -23,7 +23,6 @@ class Game{
     }
 
     start(){
-        debugger
         document.querySelector("#main").loop = true;
         document.querySelector("#main").play();
         this.points();
@@ -62,6 +61,7 @@ class Game{
         let $restartButton = document.createElement("button");
         let $popDiv = document.createElement("div");
         let $poop = document.createElement("img");
+        let $score = document.querySelector("#score");
         $poop.setAttribute("src","./images/poop.gif");
         $poop.setAttribute("id","poop");
         $restartButton.setAttribute("id", "restart-btn");
@@ -72,6 +72,7 @@ class Game{
         $popDiv.style.height = `100%`;
         $popDiv.setAttribute("id", "popup");
         document.querySelector("#main").pause();
+        $gameboard.removeChild($score);
         $body.appendChild($popDiv);
         $body.appendChild($poop);
         $body.appendChild($gameOver);
