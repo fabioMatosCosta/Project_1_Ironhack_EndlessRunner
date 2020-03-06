@@ -84,13 +84,13 @@ function renderScore(){
 }
 
 function difLevel(){
-    if (game.currentPoints>12){
+    if (game.currentPoints>17){
         for(let i = 0; i<game.obstacle.length; i++){
-            game.obstacle[i].velocity += 0.01;
+            game.obstacle[i].velocity += 0.005;
         }
     } else if(game.currentPoints>25){
         for(let i = 0; i<game.obstacle.length; i++){
-            game.obstacle[i].velocity += 0.02;
+            game.obstacle[i].velocity += 0.01;
         }
     } else if(game.currentPoints>40){
         for(let i = 0; i<game.obstacle.length; i++){
